@@ -1,0 +1,9 @@
+﻿/tsk =>>>
+	@id = set_interval(1000, closure(){
+     msg('Hello World!');
+   });
+   
+   if else {
+	clear_task(@id);
+}
+<<<

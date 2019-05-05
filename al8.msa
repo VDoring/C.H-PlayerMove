@@ -1,0 +1,22 @@
+﻿/pas [$1]=>>>
+	@gostop = false
+	export('value', @gostop) #false
+	
+		if($1 == 'go') { #go 입력
+		if(import('value', false)) {
+		if(import(@gostop, false)) { #value가 false일때 
+			export(@gostop , true) #gostop이 true가 됨
+				@id = set_interval(2000, closure( 
+				set_pvelocity(player(), array('x':2)))) #움직임
+}
+}
+}
+
+			if($1 == 'stop') { #stop 입력
+			if(import('value' == true && 'value' == @gostop)) { #value가 true일때
+				export(@gostop, 'false') #gostop이 false가 됨
+					clear_task(@id); #안움직임
+}
+}
+
+<<<

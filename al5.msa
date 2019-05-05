@@ -1,0 +1,12 @@
+﻿/tesx [$1] [$2] =>>>
+
+	if($1 == 'y') { 
+			@Yid = set_interval(2000, closure(
+			set_pvelocity(player(), array('y':2))))
+}
+	else if($2 == 'stop') {
+			
+			msg(aaaa)
+}
+
+<<<

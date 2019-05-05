@@ -1,0 +1,48 @@
+﻿/upmove2 [$1] [$2] =>>>
+
+	if($1 == '' || $1 !== 'x' && $1 !== 'y' && $1 !== 'allstop' && $1 !== 'allclear') {
+	msg(colorize(&2'(x/y)입력 or (x cl/y cl)입력 시 초기화'))
+}
+
+
+	if($1 == 'x') {
+		if(import('x move') !== true) {
+		export('x move', 'true')
+			set_interval(2000, closure(
+			set_pvelocity(player(), array('x':2))))
+	}
+	
+		else if($1 == 'x' && $2 == 'stop') {
+		export('x move', 'false')
+		
+			cancel(false)
+	}
+}
+
+
+	if($1 == 'y') {
+		if(import('y move') !== true) {
+		export('y move', 'true')
+			@Yid = set_interval(2000, closure(
+			set_pvelocity(player(), array('y':2)))
+	}
+}
+
+	if($1 == 'y' && $2 == 'stop') {
+		if(import('y move') == true) {
+		clear_task(@Yid);
+		export('y move', 'false')
+}
+})
+
+	if($1 == 'allstop') {
+		store_value('move', true)
+		msg(colorize(&e'지금은 움직일 수 없습니다!'))
+	}
+	
+	if($1 == 'allclear') {
+		store_value('move', false)
+		msg(colorize(&e'이제 움직일 수 있습니다!'))
+	}
+	
+<<<

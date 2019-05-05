@@ -1,0 +1,13 @@
+﻿/gomover2 =>>>
+
+	assign(@ids, set_interval(2000, closure())) {
+	export(test2, @ids)
+	set_pvelocity(player(), array('x':2))
+}
+<<<
+
+/delmover2 =>>>
+
+	clear_task(import(test2));
+	
+<<<

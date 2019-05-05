@@ -1,0 +1,7 @@
+﻿/psd [$1] [$2] =>>>
+if($1 == 'y' && $2 == 'stop') {
+		if(import('y move') !== false) {
+		export('y move', 'false')
+			clear_task(@Yid)
+			msg(aaaa)
+<<<

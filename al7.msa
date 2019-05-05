@@ -1,0 +1,11 @@
+﻿/pp [$1] =>>>
+
+	if($1 == 'go') {
+		@id = set_interval(2000, closure())
+		set_pvelocity(player(), array('x':2))
+}
+	else if($1 !== 'go') {
+	clear_task(@id);
+}
+
+<<<

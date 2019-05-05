@@ -1,0 +1,13 @@
+﻿/lastchat [$1] =>>>
+
+	export(test, @id)
+		if($1 == 'go') {
+			set_interval(2000, closure(){
+			set_pvelocity(player(), array('x':2))
+}})
+
+		else if($1 == 'stop') {
+			clear_task(import(test));
+}
+
+<<<

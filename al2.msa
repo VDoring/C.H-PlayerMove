@@ -1,0 +1,27 @@
+﻿/upmove [$1] =>>>
+
+	if($1 == '') {
+	msg(colorize(&4'(x/y) 입력'))
+}
+
+	else if($1 == 'x') {
+		set_interval(2000, closure(
+		set_pvelocity(player(), array('x':2))))
+}
+
+	else if($1 == 'y') {
+		set_interval(1000, 5000, closure(
+		set_pvelocity(player(), array('y':5))))
+}		
+
+	else if($1 == 'alstop') {
+		store_value('move', true)
+		msg(colorize(&e'움직일수 없습니다!'))
+}
+
+	else if($1 == 'alclear') {
+		store_value('move', false)
+		msg(colorize(&e'이제 움직일 수 있습니다!'))
+}
+
+<<<

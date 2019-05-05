@@ -1,0 +1,5 @@
+﻿/move =>>>
+set_interval(1000, closure(
+set_pvelocity(player(), array('x':1))
+))
+<<<
